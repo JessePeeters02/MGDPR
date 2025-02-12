@@ -2,6 +2,10 @@ import torch
 import csv as csv
 import torch.nn.functional as F
 import torch.distributions
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from MGDPR.graph_dataset_gen import MyDataset
 from MGDPR.dataset.graph_dataset_gen import Mydataset
 from Multi_GDNN import MGDPR
 from sklearn.metrics import matthews_corrcoef, f1_score
