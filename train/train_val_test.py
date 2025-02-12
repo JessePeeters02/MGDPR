@@ -2,7 +2,7 @@ import torch
 import csv as csv
 import torch.nn.functional as F
 import torch.distributions
-from graph_dataset_gen import Mydataset
+from MGDPR.dataset.graph_dataset_gen import Mydataset
 from Multi_GDNN import MGDPR
 from sklearn.metrics import matthews_corrcoef, f1_score
 
