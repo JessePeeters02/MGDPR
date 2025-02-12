@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-from PaRet import ParallelRetention
-from MGD import MultiReDiffusion
+from MGDPR.model.PaRet import ParallelRetention
+from MGDPR.model.MGD import MultiReDiffusion
 
 
 class MGDPR(nn.Module):
