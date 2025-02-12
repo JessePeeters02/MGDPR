@@ -4,8 +4,8 @@ import torch.nn.functional as F
 import torch.distributions
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-from MGDPR.dataset.graph_dataset_gen import MyDataset
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'dataset')))
+from graph_dataset_gen import MyDataset
 from MGDPR.model.Multi_GDNN import MGDPR
 from sklearn.metrics import matthews_corrcoef, f1_score
 

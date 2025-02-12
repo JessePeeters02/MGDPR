@@ -104,8 +104,10 @@ class MyDataset(Dataset):
         for i in range(X.shape[0]):
             for j in range(X.shape[0]):
                 A[i, j] = torch.tensor((energy[i] / energy[j]) * (math.exp(entropy[i] - entropy[j])), dtype=torch.float32)
-        
-        return torch.log(A[A<1] = 1)
+        #errorhandling
+        A[A < 1] = 1
+        return torch.log(A)
+        #return torch.log(A[A<1] = 1)
 
     def node_feature_matrix(self, dates: List[str], comlist: List[str], market: str, path: str) -> torch.Tensor:
         # Convert dates to datetime format for easier comparison
