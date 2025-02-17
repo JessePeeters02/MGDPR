@@ -6,7 +6,8 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'dataset')))
 from graph_dataset_gen import MyDataset
-from MGDPR.model.Multi_GDNN import MGDPR
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'model')))
+from Multi_GDNN import MGDPR
 from sklearn.metrics import matthews_corrcoef, f1_score
 
 # Configure the device for running the model on GPU or CPU
