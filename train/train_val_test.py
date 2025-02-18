@@ -10,6 +10,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'm
 from Multi_GDNN import MGDPR
 from sklearn.metrics import matthews_corrcoef, f1_score
 
+base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 # Configure the device for running the model on GPU or CPU
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -19,6 +21,7 @@ val_sedate = ['2015-01-01', '2015-06-30'] # these can be tuned
 test_sedate = ['2015-07-01', '2017-12-31'] # these can be tuned
 market = ['NASDAQ', 'NYSE', 'SSE'] # can be changed
 dataset_type = ['Train', 'Validation', 'Test']
+data_path = os.path.join(base_path, 'dataset', 'data')
 com_path = ['/content/drive/MyDrive/Raw_Data/Stock_Markets/NYSE_NASDAQ/NASDAQ.csv',
             '/content/drive/MyDrive/Raw_Data/Stock_Markets/NYSE_NASDAQ/NYSE.csv',
             '/content/drive/MyDrive/Raw_Data/Stock_Markets/NYSE_NASDAQ/NYSE_missing.csv']
