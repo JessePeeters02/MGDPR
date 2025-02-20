@@ -22,11 +22,16 @@ test_sedate = ['2015-07-01', '2017-12-31'] # these can be tuned
 market = ['NASDAQ', 'NYSE', 'SSE'] # can be changed
 dataset_type = ['Train', 'Validation', 'Test']
 data_path = os.path.join(base_path, 'dataset', 'data')
-com_path = ['/content/drive/MyDrive/Raw_Data/Stock_Markets/NYSE_NASDAQ/NASDAQ.csv',
-            '/content/drive/MyDrive/Raw_Data/Stock_Markets/NYSE_NASDAQ/NYSE.csv',
-            '/content/drive/MyDrive/Raw_Data/Stock_Markets/NYSE_NASDAQ/NYSE_missing.csv']
-des = '/content/drive/MyDrive/Raw_Data/Stock_Markets/NYSE_NASDAQ/raw_stock_data/stocks_indicators/data'
-directory = "/content/drive/MyDrive/Raw_Data/Stock_Markets/NYSE_NASDAQ/raw_stock_data/stocks_indicators/data/google_finance"
+com_path = [os.path.join(data_path, 'NASDAQ.csv'),
+            os.path.join(data_path, 'NYSE.csv'),
+            os.path.join(data_path, 'NYSE_missing.csv')]
+des = data_path
+directory = os.path.join(data_path, 'google_finance-NASDAQ-NYSE')
+# com_path = ['/content/drive/MyDrive/Raw_Data/Stock_Markets/NYSE_NASDAQ/NASDAQ.csv',
+#             '/content/drive/MyDrive/Raw_Data/Stock_Markets/NYSE_NASDAQ/NYSE.csv',
+#             '/content/drive/MyDrive/Raw_Data/Stock_Markets/NYSE_NASDAQ/NYSE_missing.csv']
+# des = '/content/drive/MyDrive/Raw_Data/Stock_Markets/NYSE_NASDAQ/raw_stock_data/stocks_indicators/data'
+# directory = "/content/drive/MyDrive/Raw_Data/Stock_Markets/NYSE_NASDAQ/raw_stock_data/stocks_indicators/data/google_finance"
 
 NASDAQ_com_list = []
 NYSE_com_list = []

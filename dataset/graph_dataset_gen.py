@@ -15,7 +15,8 @@ import math
 
 class MyDataset(Dataset):
     def __init__(self, root: str, desti: str, market: str, comlist: List[str], start: str, end: str, window: int, dataset_type: str):
-        super().__init()
+        # super().__init() #werkt niet
+        # super(MyDataset, self).__init__() #mogelijke oplossing
 
         self.comlist = comlist
         self.market = market
